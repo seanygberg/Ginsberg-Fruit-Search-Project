@@ -13,12 +13,22 @@ function search(str) {
 }
 
 function searchHandler(e) {
-	// TODO
+	let input = e.target.value.trim();
+	let searchResults = search(input);
+	showSuggestions(searchResults, input);
 }
 
 function showSuggestions(results, inputVal) {
-
-	// TODO
+	suggestions.innerHTML = '';
+	let len = results.length;
+	if (len === 0) {
+		return;
+	}
+	results.forEach(result => {
+		const li = document.createElement('li');
+		li.innerText = result;
+		suggestions.append(li);
+	});
 }
 
 function useSuggestion(e) {
