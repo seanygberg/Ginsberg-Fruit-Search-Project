@@ -3,11 +3,12 @@
 }
 
 :focus {
- outline: none;
+  outline: none;
 }
 
 body {
-  /* TODO */
+  background: linear-gradient(to right, #FF6F61, #FFD166);
+  color: white;
 }
 
 input {
@@ -18,44 +19,37 @@ input {
   padding: 8px;
   border: 1px solid black;
   border-radius: 4px;
-  background-color: #ffffff;
 }
 
 .search-container {
- 
+ margin-left: 25%;
+ margin-right: 25%;
+ background-color: #FF6F61;
 }
-.search-container input,
-.search-container .suggestions {
-  /* TODO */
-}
+
 .search-container input {
- /* TODO */
+ width: 100%;
+ background-color: #FFA500; 
+ color: white;
 }
 .search-container .suggestions {
-   /* TODO */
+  width: 100%;
+
 }
 
 ul {
   margin: 0 auto;
   padding: 0;
 }
-ul.has-suggestions {
-  
-}
+
 ul li {
   padding: 10px;
   cursor: pointer;
+  background-color: #FFA500; 
+  transition: background-color 0.3s ease;
+  color: #FFFFFF;
   display: block;
-  margin-left: 43%;
-  margin-right: 43%;
-  transition: background-color 0.5s ease;
-  text-align: center;
-  background-color: yellow;
 }
 ul li:hover {
-  background-color: lightgrey;
-}
-
-input {
-   /* TODO */
+  background-color: #FF6F61;
 }
