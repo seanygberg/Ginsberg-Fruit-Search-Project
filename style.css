@@ -34,14 +34,17 @@ input {
 }
 .search-container .suggestions {
   width: 100%;
-
 }
 
 ul {
   margin: 0 auto;
   padding: 0;
+  display: none;
 }
 
+ul.has-suggestions {
+  display: block;
+}
 ul li {
   padding: 10px;
   cursor: pointer;

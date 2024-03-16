@@ -21,22 +21,23 @@ function searchHandler(e) {
 
 function showSuggestions(results, inputVal) {
 	suggestions.innerHTML = '';
-	suggestions.classList.remove('has-suggestions');
 	let len = results.length;
 	if (len === 0) {
+		suggestions.classList.remove('has-suggestions');
 		return;
 	}
-	suggestions.classList.add('has-suggestions');
 	results.forEach(result => {
 		const li = document.createElement('li');
 		li.innerText = result;
 		suggestions.append(li);
 	});
+	suggestions.classList.add('has-suggestions');
 }
 
 function useSuggestion(e) {
 	if (e.target.tagName === 'LI') {
 		input.value = e.target.innerText;
+		suggestions.classList.remove('has-suggestions');
 	}
 }
 
